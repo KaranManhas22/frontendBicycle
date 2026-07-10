@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: git library
-        uses: actions/checout@v4
+        uses: actions/checkout@v4
       - name: connection
         uses: appleboy/ssh-action@v1.2.0
 
