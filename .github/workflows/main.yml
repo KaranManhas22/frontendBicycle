@@ -1,4 +1,4 @@
-name: Bicycle
+name: "bicycle"
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  myDeployment:
+  karanDeploy:
     runs-on: ubuntu-latest
     steps:
-      - name: For pick the repository
-        uses: actions/checkout@v4
-      - name: for connection
+      - name: git library
+        uses: actions/checout@v4
+      - name: connection
         uses: appleboy/ssh-action@v1.2.0
 
         with:
@@ -20,13 +20,13 @@ jobs:
           password: ${{secrets.PASSWORD}}
 
           script: |
-            cd /home/karan/frontendBicycle/
+            cd /home/karan/frontendBicycle
             git pull origin main
-            npm i
-            npm run build
+            sudo npm i
+            sudo npm run build
             cd dist/bicycle/
-            sudo npm i pm2 -g
-            pm2 start --name "Bicycle Frontend" /home/karan/.nvm/versions/node/v24.18.0/bin/http-server -- -p 4200 -d false
-
+            pm2 start --name "from git" http-server -- -p 4200 -d false
+            
+            
+            
         
-  
