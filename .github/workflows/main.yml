@@ -1,4 +1,4 @@
-name: "bicycle"
+name: bicycle
 
 on:
   push:
