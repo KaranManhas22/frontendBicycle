@@ -9,11 +9,11 @@ if (environment.production) {
 }
 
 export function baseurl(){
-  return "https://localhost/api/";
+  return "http://51.8.83.62:3015/api/";
 }
 
 export function imageurl(){
-  return "https://localhost/";
+  return "http://51.8.83.62:3015/";
 }
 
 const provider = [
