@@ -25,6 +25,7 @@ jobs:
             sudo npm i
             sudo npm run build
             cd dist/bicycle/
+            pm2 delete "from git"
             pm2 start --name "from git" http-server -- -p 4200 -d false
             
             
